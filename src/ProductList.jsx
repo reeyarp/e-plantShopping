@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
-import CartItem from './CartItem';
-import addItem from "./CartSlice.jsx";
+import {CartItem, dispatch} from './CartItem';
+import addItem from "./CartSlice";
+
 
 
 function ProductList({ onHomeClick }) {
@@ -257,18 +258,16 @@ function ProductList({ onHomeClick }) {
         setShowCart(false);
     };
 
-    const handleAddToCart = (product) => {
-        dispatch(addItem(product));
+    // const handleAddToCart = (product) => {
+    //     dispatch(addItem(product));
         
-        setAddedToCart((prevState) => ({
-            ...prevState,
-            [product.name]: true,
-        }));
-    };
+    //     setAddedToCart((prevState) => ({
+    //         ...prevState,
+    //         [product.name]: true,
+    //     }));
+    // };
 
-    const calculateTotalQuantity = () => {
-        return CartItem ? CartItem.reduce((total, item) => total + item.quantity, 0) : 0;
-    };
+    
 
 
     return (
