@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
-import addItem from "./CartSlice.jsx";
+import addItem from "./CartSlice";
 
 
 function ProductList({ onHomeClick }) {
@@ -258,7 +258,7 @@ function ProductList({ onHomeClick }) {
     };
 
     const handleAddToCart = (product) => {
-        dispatchEvent(addItem(product));
+        dispatch(addItem(product));
         
         setAddedToCart((prevState) => ({
             ...prevState,
