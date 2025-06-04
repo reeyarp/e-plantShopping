@@ -258,14 +258,14 @@ function ProductList({ onHomeClick }) {
         setShowCart(false);
     };
 
-    // const handleAddToCart = (product) => {
-    //     dispatch(addItem(product));
+    const handleAddToCart = (product) => {
+        dispatch(addItem(product));
         
-    //     setAddedToCart((prevState) => ({
-    //         ...prevState,
-    //         [product.name]: true,
-    //     }));
-    // };
+        setAddedToCart((prevState) => ({
+            ...prevState,
+            [product.name]: true,
+        }));
+    };
 
     
 
