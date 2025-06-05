@@ -282,7 +282,7 @@ function ProductList() {
                         <a href="/" onClick={(e) => handleHomeClick(e)}>
                             <div>
                                 <h3 style={{ color: 'white' }}>Paradisee Nursery</h3>
-                                <i style={{ color: 'white' }}>Where Green Meets Serenity</i>
+                                <i style={{ color: 'white' }}>Where Green Meets Serenityyy</i>
                             </div>
                         </a>
                     </div>
